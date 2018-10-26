@@ -1,0 +1,47 @@
+html {
+  font-size: 62.5%;
+  font-family: arial;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  stroke-opacity: 0.3;
+  shape-rendering: crispEdges;
+}
+
+.view {
+  fill: url(#gradient);
+  stroke: #000;
+}
+#resetbutton{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
+
+.Selected{
+    fill: #825eff;
+    r: 13;
+    opacity:1;
+}
+
+.notSelected{
+    fill: black;
+    opacity:0.5;
+}

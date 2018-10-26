@@ -1,0 +1,36 @@
+{
+  "name": "@ircam/gui-components",
+  "version": "1.0.3",
+  "description": "Set of simple GUI components",
+  "main": "dist/index.js",
+  "author": "Benjamin Matuszewski",
+  "license": "BSD-3-Clause",
+  "standalone": "guiComponents",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "bundle": "node ./bin/runner --bundle",
+    "deploy": "np --yolo",
+    "doc": "jsdoc2md -t tmpl/README.hbs src/*.js > README.md",
+    "transpile": "node ./bin/runner --transpile",
+    "version": "npm run transpile && npm run doc && git add README.md",
+    "prewatch": "npm run transpile",
+    "watch": "node ./bin/runner --watch"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "browserify": "^14.5.0",
+    "chalk": "^2.3.0",
+    "fs-extra": "^4.0.3",
+    "jsdoc-to-markdown": "^3.0.0",
+    "klaw": "^2.1.1",
+    "np": "^2.18.2",
+    "tape": "^4.8.0",
+    "uglify-js": "^3.2.2",
+    "watch": "^1.0.2"
+  }
+}
